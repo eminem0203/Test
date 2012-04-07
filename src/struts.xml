@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.custom.i18n.resources" value="message" />
+
+	<package name="/User" extends="struts-default">
+
+		<action name="userAddAction" class="com.eminem.action.ManageUserAction"
+			method="userAdd">
+			<result name="success" type="redirect">/User/userQueryActionByPage.action
+			</result>
+			<result name="input">/pages/UserManage/UserAdd.jsp</result>
+		</action>
+
+		<action name="userQueryAction" class="com.eminem.action.ManageUserAction"
+			method="getAllUsers">
+			<result name="queryAll">/pages/UserManage/UserList.jsp</result>
+		</action>
+
+		<action name="userQueryActionByPage" class="com.eminem.action.ManageUserAction"
+			method="getAllUsersByPage">
+			<result name="getAllUsersByPage">/pages/UserManage/UserList.jsp</result>
+		</action>
+
+		<action name="userShowSingleAction" class="com.eminem.action.ManageUserAction"
+			method="showSingleUser">
+			<result name="showSingle">/pages/UserManage/ShowUser.jsp</result>
+		</action>
+
+		<action name="userUpdateAction" class="com.eminem.action.ManageUserAction"
+			method="userUpdate">
+			<result name="success">/pages/UserManage/success.jsp</result>
+		</action>
+
+		<action name="userQueryFirstAction" class="com.eminem.action.ManageUserAction"
+			method="getAllUsersAtFirst">
+			<result name="queryAllAtFirst">/Test.jsp</result>
+		</action>
+
+		<action name="userDeleteAction" class="com.eminem.action.ManageUserAction"
+			method="userDelete">
+			<result name="success" type="redirect">/User/userQueryActionByPage.action
+			</result>
+		</action>
+
+		<action name="userPrePasswordUpdateAction" class="com.eminem.action.ManageUserAction"
+			method="userPrePasswordUpdate">
+			<result name="toUpdatePassword">/pages/UserManage/UserPasswordUpdate.jsp</result>
+		</action>
+		
+		<action name="userQueryByNameAction" class="com.eminem.action.ManageUserAction"
+			method="userQueryByName">
+			<result>/pages/UserManage/UserList.jsp</result>
+		</action>
+
+		<action name="userPasswordUpdateAction" class="com.eminem.action.ManageUserAction"
+			method="userPasswordUpdate">
+			<result name="UpdatePassword" type="redirect">/pages/UserManage/success.jsp</result>
+			<result name="uncorrect old password" type="redirect">
+				<param name="actionName">/User/userPrePasswordUpdateAction.action</param>
+				<param name="user">${user}</param> 
+			</result>
+			<result name="uncorrect new password">/pages/UserManage/Error_RePassword.jsp</result>
+		</action>
+		
+		<action name="fileUploadAction" class="com.eminem.action.FileUploadAction">
+			<result>/pages/UserManage/success.jsp</result>
+			<result name="error">/pages/UserManage/UserPasswordUpdate.jsp</result>
+		</action>		
+	</package>
+	
+	<package name="/Role" extends="struts-default">
+		<action name="roleQueryAction" class="com.eminem.action.ManageRoleAction"
+			method="getRoleInfo">
+			<result>/pages/UserManage/success.jsp</result>
+		</action>
+	</package>
+
+</struts>

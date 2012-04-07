@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="/User" location="0,0" size="0,0">
+    <action name="userAddAction" location="0,0" size="0,0">
+      <result name="success" />
+      <result name="input" />
+    </action>
+    <action name="userQueryAllAction" location="0,0" size="0,0">
+      <result name="queryAll" />
+    </action>
+  </package>
+  <webResource name="Login.jsp" path="/WEB-PAGE/Login.jsp" location="987,1290" size="150,55" />
+  <webResource name="Homepage_SUP.jsp" path="/WEB-PAGE/SUP-PAGES/Homepage_SUP.jsp" location="61,135" size="150,55" />
+  <webResource name="Homepage_SMM.jsp" path="/WEB-PAGE/SMM-PAGES/Homepage_SMM.jsp" location="61,310" size="150,55" />
+  <webResource name="Homepage_SMS.jsp" path="/WEB-PAGE/SMS-PAGES/Homepage_SMS.jsp" location="61,485" size="150,55" />
+  <webResource name="Homepage_MS.jsp" path="/WEB-PAGE/MS-PAGES/Homepage_MS.jsp" location="67,660" size="150,55" />
+  <webResource name="Homepage_SS.jsp" path="/WEB-PAGE/SS-PAGES/Homepage_SS.jsp" location="67,835" size="150,55" />
+  <webResource name="ChangePassword.jsp" path="/WEB-PAGE/ChangePassword.jsp" location="680,1185" size="150,55" />
+  <webResource name="Test.jsp" path="/WEB-PAGE/Test.jsp" location="185,1010" size="150,55" />
+  <webResource name="UserAdd.jsp" path="/WEB-PAGE/UserManage/UserAdd.jsp" location="388,1185" size="150,55" />
+  <webResource name="Test.jsp" path="/page/Test.jsp" location="350,350" size="150,55" />
+  <webResource name="UserAdd.jsp" path="/page/UserManage/UserAdd.jsp" location="500,350" size="150,55" />
+  <webResource name="success.jsp" path="/page/UserManage/success.jsp" location="350,500" size="150,55" />
+  <webResource name="success.jsp" path="/pages/UserManage/success.jsp" location="0,0" size="0,0" />
+  <webResource name="UserAdd.jsp" path="/pages/UserManage/UserAdd.jsp" location="0,0" size="0,0" />
+</Struts2Diagram>
+
