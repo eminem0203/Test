@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.eminem.bean">
+  <!-- <generator class="increment"/> -->
+  <class name="User" table="user">
+    <id name="id" column="id" type="java.lang.Integer">
+      <generator class="increment"></generator>
+    </id>
+    <property name="name" column="name" type="java.lang.String"></property>
+    <property name="password" column="password" type="java.lang.String"></property>
+    <property name="e_mail" column="e_mail" type="java.lang.String"></property>
+    <property name="role" column="role" type="java.lang.String"></property>
+    <property name="report_to" column="report_to" type="java.lang.String"></property>
+    <property name="regDate" column="regDate" type="java.sql.Date"></property>
+  </class>
+</hibernate-mapping>
